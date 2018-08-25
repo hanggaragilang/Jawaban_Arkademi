@@ -1,5 +1,4 @@
 # Jawaban_Arkademi
-### **Belajar github**
 
 **Untuk Menjawab Pertanyaan no 1 s/d 3 saya menggunakan bahasa pemograman javascript**
 ___
