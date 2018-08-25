@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>soal-2</title>
+</head>
+<body>
+    <form>
+        <p>Nama :
+        <input type="text" name="nama" id="nama"></p>
+        <p>No. Telp :
+        <input type="number" name="telp" id="telp"></p>
+        <p>Email :
+        <input type="email" name="email" id="email"></p>
+        <p><input type="submit" onClick="validasi()" value="Submit"></p>
+    </form>
+
+
+    <script>
+        
+        //fungsi huruf kecil
+        function lowerCase(nilai, pesan) {
+          const alphaExp = /^[a-z]+$/;
+          if(nilai.value.match(alphaExp)) {
+            return true;
+          }
+          else {
+            alert(pesan);
+            nilai.focus();
+            return false;
+          }
+        }
+        
+        // fungsi cek no telepon
+        function Number(nilai, pesan) {
+           const numberExp = /^[0-9]+$/;
+           if(nilai.value.match(numberExp)) {
+             return true;
+           }
+           else {
+             alert(pesan);
+             nilai.focus();
+             return false;
+           }
+        }
+
+        // fungsi cek email
+        function cekEmail(nilai, pesan) {
+          const email = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+          if(nilai.value.match(email)) {
+            return true;
+          }
+          else {
+            alert(pesan);
+            nilai.focus();
+            return false;
+          }
+        }
+
+        function validasi() {
+          lowerCase(document.getElementById('nama'), 'Nama harus Huruf kecil semua!!');
+          Number(document.getElementById('telp'), 'Telp. hanya ber isi Number!!');
+          cekEmail(document.getElementById('email'), 'Email tidak benar!!');
+        }
+
+    </script>
+</body>
+</html>

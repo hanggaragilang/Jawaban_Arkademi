@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal-1</title>
+</head>
+<body>
+
+
+<script>
+	
+	function biodata(name,address,hobbies,is_maried,highschool,university,skill){
+
+		const school = {highschool : highschool, university : university}
+		let skills = []
+		skills.push(skill)
+		const json = [ name, address, hobbies, is_maried, school, skills] 
+		return json
+	}	
+
+	let coba = biodata('gilang','bandung','sepak bola',false,'bale','bandung','programing')
+	console.log(coba)
+
+</script>
+
+
+
+</body>
+</html>
